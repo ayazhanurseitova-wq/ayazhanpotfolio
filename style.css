@@ -1,0 +1,161 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
+
+/* Навигация */
+header { background: #fff; padding: 20px 10%; border-bottom: 1px solid #eee; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+
+/* Геро-секция */
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 10%; }
+.hero-text { max-width: 500px; }
+h1 { font-size: 3rem; margin-bottom: 10px; }
+.btn { background: #000; color: #fff; padding: 12px 30px; border: none; cursor: pointer; border-radius: 5px; transition: 0.3s; }
+.btn:hover { background: #333; transform: scale(1.05); }
+
+/* Карточки проектов */
+#projects { padding: 50px 10%; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+.card { background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; }
+}
+/* Для планшетов (экраны до 1024px) */
+@media (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд */
+    }
+}
+
+/* Для смартфонов (экраны до 600px) */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column; /* Текст и фото встанут друг под другом */
+        text-align: center;
+        padding: 40px 5%;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr; /* 1 карточка в ряд */
+    }
+    
+    h1 { font-size: 2rem; }
+    nav ul { display: none; } /* Можно скрыть меню или сделать его выпадающим */
+}
+/* Базовые настройки */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #fdfdfd; }
+
+/* Навигация */
+header { background: #fff; padding: 20px 10%; border-bottom: 1px solid #eee; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
+nav ul li a:hover { color: #555; }
+
+/* Геро-секция (Первый экран) */
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 10%; gap: 50px; }
+.hero-text { max-width: 500px; }
+.hero-image img { width: 350px; height: 350px; object-fit: cover; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+h1 { font-size: 3rem; margin-bottom: 15px; }
+
+/* Общий стиль кнопок */
+.btn { 
+    display: inline-block;
+    background: #000; 
+    color: #fff; 
+    padding: 12px 30px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    margin-top: 20px; 
+    text-decoration: none;
+    transition: 0.3s; 
+}
+.btn:hover { background: #444; transform: scale(1.05); }
+
+/* Секция проектов */
+#projects { padding: 50px 10%; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+.card { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; }
+.card:hover { border-color: #000; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+
+/* Подвал */
+footer { padding: 50px 10%; text-align: center; background: #eee; }
+
+/* Адаптивность для мобилок */
+@media (max-width: 768px) {
+    .hero { flex-direction: column; text-align: center; padding: 40px 5%; }
+    .hero-image img { width: 250px; height: 250px; }
+    h1 { font-size: 2rem; }
+}
+/* Дағдылар бөліміне стиль */
+#skills { padding: 50px 10%; background: #fff; }
+.skills-content { margin-top: 20px; }
+
+/* Пікірлер бөліміне стиль */
+#reviews { padding: 50px 10%; background: #f9f9f9; }
+.review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+.review-card { background: #fff; padding: 20px; border-radius: 10px; border-left: 5px solid #000; box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+.social-links { margin-top: 15px; }
+.social-links a { color: #555; text-decoration: none; margin: 0 10px; font-size: 0.9rem; }
+.social-links a:hover { color: #000; }
+/* Отступ для секции отзывов */
+#reviews { 
+    padding: 80px 10%; /* Увеличили верхний и нижний отступы */
+    background: #fdfdfd; 
+}
+
+/* Стиль для подвала (Хабарласу) */
+#contact { 
+    padding: 60px 10%; 
+    background: #eeeeee; /* Немного другой цвет для выделения */
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 50px; /* Создает "воздух" между отзывами и этим блоком */
+}
+
+/* Чтобы кнопка в footer не была слишком большой */
+#contact .btn {
+    margin-top: 20px;
+    display: inline-block;
+}
+/* Скругление углов у фотографии */
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px; /* Смягчение углов */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Настройка текста "Сәлем, мен Аяжан!" */
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Настройка подзаголовка "Болашақ веб-дизайнер..." */
+.hero-text .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Стилизация основного текста */
+.about-text {
+    line-height: 1.8;
+    color: #333;
+    max-width: 600px;
+}
